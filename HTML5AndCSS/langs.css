@@ -1,0 +1,9 @@
+.lang{
+    display: inline-block;
+    padding: 5px;
+    background-color: lightgrey;
+    border-width: 1px;
+    border-color: rgba(128, 128, 128, 0.3);
+    border-style: solid;
+    border-radius: 5px;
+}
