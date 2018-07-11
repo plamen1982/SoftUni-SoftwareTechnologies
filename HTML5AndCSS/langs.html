@@ -11,5 +11,42 @@
     <span class="lang">JavaScript</span>, <span class="lang">C&#35;</span>
     and <span class="lang">Java</span> are general&#8211;purpose.
 </div>
+<br>
+<span>Names:</span>
+
+<ul id="name">
+
+</ul>
+<span>Email:</span>
+
+<ul id="email">
+
+</ul>
+<script src = "faker.js" type = "text/javascript"></script>
+<script>
+    let fakeName = faker.name.findName(); // Caitlyn Kerluke
+    let fakeEmail = faker.internet.email(); // Rusty@arne.info
+    let creditCard = faker.helpers.createCard(); // random contact card containing many properties
+    let name = document.getElementById('name');
+    name.innerHTML = fakeName;
+    let email = document.getElementById('email');
+    email.innerHTML = fakeEmail;
+    let arrayOfNames = [];
+    let li;
+    let textNodeName;
+    let textNodeEmail;
+    for (let i = 0; i < 10; i++){
+
+    liName = document.createElement('li');
+    liEmail = document.createElement('li');
+    textNodeName = document.createTextNode(faker.name.findName());
+    textNodeEmail = document.createTextNode(faker.internet.email());
+    liName.appendChild(textNodeName);
+    liEmail.appendChild(textNodeEmail);
+    document.getElementById('name').appendChild(liName);
+    document.getElementById('name').appendChild(liEmail);
+    }
+
+</script>
 </body>
 </html>
