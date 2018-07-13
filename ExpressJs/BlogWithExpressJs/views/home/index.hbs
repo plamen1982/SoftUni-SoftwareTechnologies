@@ -1,0 +1,26 @@
+<div class="container body-content">
+    <div class="row">
+        {{#each articles as |article|}}
+            <div class="col-md-6">
+                <article>
+                    <header>
+                        <h2>{{article.title}}</h2>
+                    </header>
+
+                    <p>{{article.content}}
+                    </p>
+
+                    <small class="author">
+                        {{article.User.fullName}}
+                    </small>
+
+                    <footer>
+                        <div class="pull-right">
+                            <a class="btn btn-default btn-xs" href="/article/details/{{this.id}}">Read more &raquo;</a>
+                        </div>
+                    </footer>
+                </article>
+            </div>
+        {{/each}}
+    </div>
+</div>
