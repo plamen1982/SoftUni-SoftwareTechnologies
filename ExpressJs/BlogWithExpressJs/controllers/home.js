@@ -6,9 +6,8 @@ module.exports = {
         Article.findAll({ limit: 6, include: [{
             model: User
             }]}).then(articles => {
-           res.render('home/index', { articles })
+           res.render('home/index', { articles: articles })
         });
-        res.render('home/index');
     }
 };
 

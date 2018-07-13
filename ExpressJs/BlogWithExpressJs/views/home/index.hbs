@@ -1,17 +1,17 @@
 <div class="container body-content">
     <div class="row">
-        {{#each articles as |article|}}
+        {{#each articles }}
             <div class="col-md-6">
                 <article>
                     <header>
-                        <h2>{{article.title}}</h2>
+                        <h2>{{this.title}}</h2>
                     </header>
 
-                    <p>{{article.content}}
+                    <p>{{this.content}}
                     </p>
 
                     <small class="author">
-                        {{article.User.fullName}}
+                        {{this.User.fullName}}
                     </small>
 
                     <footer>

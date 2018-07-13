@@ -1,4 +1,5 @@
 const Article = require('../models').Article;
+const User = require('../models').User;
 
 module.exports = {
     createGet: (req, res) => {
@@ -29,11 +30,11 @@ module.exports = {
     },
     details: (req, res) => {
         let id = req.params.id;
-        Article.findById((id, {include: [
+        Article.findById(id, {include: [
                 {
                     model: User,
                 }
-            ]})).then(article => {
+            ]}).then(article => {
                 res.render('article/details', article.dataValues)
         })
     }
