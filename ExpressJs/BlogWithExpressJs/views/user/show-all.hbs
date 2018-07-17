@@ -1,0 +1,33 @@
+<div class="container body-content">
+    <div class="row">
+        {{#each users }}
+            <div class="col-md-6">
+                <article>
+                    <header>
+                        <h2>{{this.fullName}}</h2>
+                    </header>
+
+                    <p>{{this.email}}
+                    </p>
+
+                    <small class="author">
+                        {{this.User.fullName}}
+                    </small>
+
+                    <footer>
+                        <div>
+                            {{#if this.isAdmin}}
+                                <a class="btn btn-default" href="/user/edit-user">EDIT</a>
+                            {{else}}
+                            <form method="POST" action="/user/delete-user/{{this.id}}">
+                                <button type="submit" class="btn btn-default btn-xs mb-3">DELETE</button>
+                            </form>
+                                <a class="btn btn-default col-md-offse" href="/user/edit-user/{{this.id}}">EDIT</a>
+                            {{/if}}
+                        </div>
+                    </footer>
+                </article>
+            </div>
+        {{/each}}
+    </div>
+</div>

@@ -56,7 +56,6 @@ async function create(models) {
             await db[modelName].sync();
             models.splice(i, 1);
             i--;
-            console.log('success for '+ modelName);
         } catch (err) {
             console.log('failed to initialize '+ modelName);
         }

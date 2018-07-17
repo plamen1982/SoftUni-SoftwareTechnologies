@@ -21,6 +21,10 @@ module.exports = function (sequelize) {
             type: Sequelize.STRING,
             required: true
         },
+        isAdmin: {
+            type: Sequelize.BOOLEAN,
+            required: true
+        }
 
     }, {
         timestamps: false
