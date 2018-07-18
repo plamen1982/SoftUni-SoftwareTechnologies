@@ -23,7 +23,7 @@
                 {{#if user.isAdmin }}
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="/user/details">Welcome({{user.fullName}})</a></li>
+                        <li><a href="/user/details/{{user.id}}">Welcome({{user.fullName}})</a></li>
                         <li><a href="/article/create">New Article</a></li>
                         <li><a href="/user/logout">Logout</a></li>
                         <li><a href="/user/admin-panel">Admin Panel</a></li>
@@ -32,7 +32,7 @@
                 {{else}}
                     <div class="navbar-collapse collapse">
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a href="/user/details">Welcome({{user.fullName}})</a></li>
+                            <li><a href="/user/details/{{user.id}}">Welcome({{user.fullName}})</a></li>
                             <li><a href="/article/create">New Article</a></li>
                             <li><a href="/user/logout">Logout</a></li>
                         </ul>

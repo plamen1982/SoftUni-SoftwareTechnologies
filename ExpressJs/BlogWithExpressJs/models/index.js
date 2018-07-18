@@ -5,7 +5,7 @@ const basename = path.basename(module.filename);
 const env = process.env.NODE_ENV || 'development';
 const config = require(`${__dirname}/../config/config`).database[env];
 const db = {};
-console.log(config);
+
 let sequelize;
 if (config.use_env_variable) {
     sequelize = new Sequelize(process.env[config.use_env_variable]);
@@ -19,6 +19,7 @@ fs
     //.readdirSync - returns an array of filenames,
    //__dirname - the directory name of the current module
     .readdirSync(__dirname)
+
     .filter(file =>
         (file.indexOf('.') !== 0) &&
         (file !== basename) &&

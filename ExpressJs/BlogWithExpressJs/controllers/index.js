@@ -5,5 +5,5 @@ const article = require('./article');
 module.exports = {
     user,
     home,
-    article
+    article,
 };

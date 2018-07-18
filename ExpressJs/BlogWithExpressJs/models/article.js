@@ -19,6 +19,12 @@ module.exports = function (sequelize) {
             defaultValue: Sequelize.NOW
         }
     });
+    Article.associate = function (models) {
+        Article.hasMany(models.Comment, {
+            foreignKey: 'authorId',
+            sourceKey: 'Id'
+        })
+    };
 
     Article.associate = function (models) {
         Article.belongsTo(models.User, {
